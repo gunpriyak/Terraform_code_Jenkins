@@ -1,7 +1,10 @@
+
+}
 terraform {
   backend "s3" {
-    bucket = "my-first-bucket"
+    bucket = "mydev-tf-state-bucket-project-terraform"
+    key = "main"
     region = "us-east-1"
-    key = "eks/terraform.tfstate"
+    dynamodb_table = "my-dynamodb-table"
   }
 }
